@@ -1,0 +1,177 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'Purchase Register'
+  ClientHeight = 420
+  ClientWidth = 300
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object LTitle: TLabel
+    Anchors = [akLeft, akTop, akRight]
+    StyledSettings = [Family, FontColor]
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 280.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.Font.Style = [fsBold, fsItalic]
+    TextSettings.HorzAlign = Center
+    Text = 'Purchase Register'
+  end
+  object LMessage: TLabel
+    StyledSettings = [Family, Size, Style]
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 330.000000000000000000
+    Size.Width = 208.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.FontColor = claBlue
+    TextSettings.HorzAlign = Center
+  end
+  object BNew: TButton
+    OnTap = BNewTap
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 370.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'New Item'
+    OnClick = BNewClick
+  end
+  object BView: TButton
+    OnTap = BViewTap
+    Enabled = False
+    Locked = True
+    Position.X = 81.000000000000000000
+    Position.Y = 370.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'View Item'
+    OnClick = BViewClick
+  end
+  object BStats: TButton
+    OnTap = BStatsTap
+    Locked = True
+    Position.X = 153.000000000000000000
+    Position.Y = 370.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Statistics'
+    OnClick = BStatsClick
+  end
+  object LVItems: TListView
+    OnTap = LVItemsTap
+    ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+    ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    EditMode = True
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 60.000000000000000000
+    Size.Width = 280.000000000000000000
+    Size.Height = 220.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    ItemAppearanceObjects.ItemObjects.Detail.TextAlign = Trailing
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    ItemAppearanceObjects.ItemObjects.Image.Visible = False
+    ItemAppearanceObjects.ItemEditObjects.Accessory.AccessoryType = Checkmark
+    ItemAppearanceObjects.ItemEditObjects.Image.Visible = False
+    OnClick = LVItemsClick
+    OnDblClick = LVItemsDblClick
+    CanSwipeDelete = False
+    OnItemClick = LVItemsItemClick
+    SearchVisible = True
+  end
+  object BCheckAll: TButton
+    OnTap = BCheckAllTap
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 290.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'All'
+    OnClick = BCheckAllClick
+  end
+  object BCheckNone: TButton
+    OnTap = BCheckNoneTap
+    Locked = True
+    Position.X = 81.000000000000000000
+    Position.Y = 290.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'None'
+    OnClick = BCheckNoneClick
+  end
+  object BCheckInvert: TButton
+    OnTap = BCheckInvertTap
+    Locked = True
+    Position.X = 153.000000000000000000
+    Position.Y = 290.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Invert'
+    OnClick = BCheckInvertClick
+  end
+  object BDeleteChecked: TButton
+    OnTap = BDeleteCheckedTap
+    Locked = True
+    Position.X = 225.000000000000000000
+    Position.Y = 290.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Delete'
+    OnClick = BDeleteCheckedClick
+  end
+  object BSave: TButton
+    OnTap = BSaveTap
+    Locked = True
+    Position.X = 225.000000000000000000
+    Position.Y = 370.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'Save'
+    OnClick = BSaveClick
+  end
+  object BReload: TButton
+    OnTap = BReloadTap
+    Locked = True
+    Position.X = 225.000000000000000000
+    Position.Y = 330.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'Reload'
+    OnClick = BReloadClick
+  end
+end

@@ -1,0 +1,238 @@
+object FormItem: TFormItem
+  Left = 0
+  Top = 0
+  Caption = 'Purchase'
+  ClientHeight = 440
+  ClientWidth = 240
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnResize = FormResize
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object GBPaymentMethod: TGroupBox
+    Anchors = [akLeft, akTop, akRight]
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 90.000000000000000000
+    Size.Width = 220.000000000000000000
+    Size.Height = 90.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Payment Method'
+    TabOrder = 1
+    object RBCard: TRadioButton
+      Anchors = [akLeft, akTop, akRight]
+      GroupName = 'PaymentType'
+      Locked = True
+      Position.X = 10.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Payed with Card'
+    end
+    object RBCash: TRadioButton
+      Anchors = [akLeft, akTop, akRight]
+      GroupName = 'PaymentType'
+      Locked = True
+      Position.X = 10.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Payed with Cash'
+    end
+    object RBInternet: TRadioButton
+      Anchors = [akLeft, akTop, akRight]
+      GroupName = 'PaymentType'
+      Locked = True
+      Position.X = 10.000000000000000000
+      Position.Y = 60.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Payed on Internet'
+    end
+  end
+  object GBDescription: TGroupBox
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 250.000000000000000000
+    Size.Width = 220.000000000000000000
+    Size.Height = 90.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Description'
+    TabOrder = 3
+    object MDescription: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      CheckSpelling = True
+      DataDetectorTypes = []
+      TextSettings.WordWrap = True
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Locked = True
+      Position.X = 10.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 196.000000000000000000
+      Viewport.Height = 56.000000000000000000
+    end
+  end
+  object GBDate: TGroupBox
+    Anchors = [akLeft, akTop, akRight]
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 220.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Date of Purchase'
+    TabOrder = 0
+    object EDay: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      KeyboardType = NumberPad
+      FilterChar = '0123456789'
+      Position.X = 10.000000000000000000
+      Position.Y = 20.000000000000000000
+      Locked = True
+      Size.Width = 40.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Day'
+      OnExit = EDayExit
+    end
+    object EYear: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akTop, akRight]
+      TabOrder = 2
+      KeyboardType = NumberPad
+      FilterChar = '0123456789'
+      Position.X = 170.000000000000000000
+      Position.Y = 20.000000000000000000
+      Locked = True
+      Size.Width = 40.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Year'
+      OnExit = EYearExit
+    end
+    object CBMonth: TComboBox
+      Anchors = [akLeft, akTop, akRight]
+      Locked = True
+      Items.Strings = (
+        'January'
+        'February'
+        'March'
+        'April'
+        'May'
+        'June'
+        'July'
+        'August'
+        'September'
+        'October'
+        'November'
+        'December')
+      ItemIndex = 0
+      Position.X = 55.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 110.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+  end
+  object GBValue: TGroupBox
+    Anchors = [akLeft, akTop, akRight]
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 180.000000000000000000
+    Size.Width = 220.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Value of Purchase'
+    TabOrder = 2
+    object EValue: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 0
+      KeyboardType = NumberPad
+      FilterChar = '0123456789,.-'
+      Position.X = 10.000000000000000000
+      Position.Y = 20.000000000000000000
+      Locked = True
+      Size.Width = 200.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Value'
+      OnExit = EValueExit
+    end
+  end
+  object BRegister: TButton
+    OnTap = BRegisterTap
+    Locked = True
+    Position.X = 20.000000000000000000
+    Position.Y = 390.000000000000000000
+    Size.Width = 130.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Register'
+    OnClick = BRegisterClick
+  end
+  object BBack: TButton
+    OnTap = BBackTap
+    Locked = True
+    Position.X = 160.000000000000000000
+    Position.Y = 390.000000000000000000
+    Size.Width = 60.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Back'
+    OnClick = BBackClick
+  end
+  object LMessage: TLabel
+    Anchors = [akLeft, akTop, akRight]
+    StyledSettings = [Family, Size, Style]
+    Locked = True
+    Position.X = 10.000000000000000000
+    Position.Y = 345.000000000000000000
+    Size.Width = 220.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.FontColor = claBlue
+    TextSettings.HorzAlign = Center
+  end
+  object BModify: TButton
+    OnTap = BModifyTap
+    Locked = True
+    Position.X = 20.000000000000000000
+    Position.Y = 390.000000000000000000
+    Size.Width = 60.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Modify'
+    OnClick = BModifyClick
+  end
+  object BDelete: TButton
+    OnTap = BDeleteTap
+    Locked = True
+    Position.X = 90.000000000000000000
+    Position.Y = 390.000000000000000000
+    Size.Width = 60.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Delete'
+    OnClick = BDeleteClick
+  end
+end
