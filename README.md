@@ -1,4 +1,4 @@
-# PurchaseRegisterDelphi
+# PurchaseRegister (Delphi/FireMonkey, desktop, GUI, file DB)
 <p>Multi-platform GUI app for managing and analysing purchases.</p>
 <p>This project has been made in order to demonstrate coding capabilities of the owner.</p>
 <p>The app runs on Windows XP-11 32-64bit, Android, OSx, OS64, OS32 as it is (.exe).
